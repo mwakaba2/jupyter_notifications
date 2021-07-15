@@ -14,7 +14,7 @@ Notebook Cell Completion Browser Notifications for JupyterLab.
 
 * Web Browser that supports the Notification Web API (See [Browser Compatibility Chart](https://developer.mozilla.org/en-US/docs/Web/API/notification#browser_compatibility))
 * JupyterLab >= 3.0
-* Notebook Cell Timing needs to be enabled for Jupyterlab Notifications to work. Please go to Settings -> Advanced Settings Editor -> Notebook and update setting to:
+* Notebook Cell Timing needs to be enabled for Jupyterlab Notifications with version < `0.3.0` to work. Please go to Settings -> Advanced Settings Editor -> Notebook and update setting to:
 ```json5
 {
   // Recording timing
@@ -22,6 +22,7 @@ Notebook Cell Completion Browser Notifications for JupyterLab.
   "recordTiming": true
 }
 ```
+* [BETA] the cell timing doesn't need to be enabled for Jupyterlab >= 3.1 and Jupyterlab notification version 0.3.0.
 
 ## Install
 
@@ -57,7 +58,6 @@ Use the following settings to update cell execution time for a notification and 
     // Report Notebook Cell Number
     // Display notebook cell number in the notification.
     "report_cell_number": true,
-
     // Cell Number Type
     // Type of cell number to display when the report_cell_number is true. Select from 'cell_index' or ‘cell_execution_count'.
     "cell_number_type": "cell_index"
